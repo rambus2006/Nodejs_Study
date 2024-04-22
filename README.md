@@ -1,7 +1,6 @@
 <div style="display: flex; align-items: flex-start;"><img src="https://techstack-generator.vercel.app/nginx-icon.svg" alt="icon" width="65" height="65" /></div>
 
 # Node.js 수업내용
----
 [0311 수업](https://github.com/rambus2006/Nodejs_Study/tree/master/01_blockvarable-240311)
 <br/>
 [0314 수업](https://github.com/rambus2006/Nodejs_Study/tree/master/02_JSBasic-240314)
