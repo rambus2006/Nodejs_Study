@@ -12,11 +12,9 @@
 [0325-28 수업](https://github.com/rambus2006/Nodejs_Study/tree/master/05_http-240328)
 <br/>
 [0404 수업](https://github.com/rambus2006/Nodejs_Study/tree/master/06_express-240404)
-
+<br/>
+[0527 수업]
 
 ### 수행
 ---
-npm 버전 부분 제외 
-express 보면 된다. 
-코드 작성은 5문제, 나머지는 객관식 
-http 부분은 안써도 된다. 
+
