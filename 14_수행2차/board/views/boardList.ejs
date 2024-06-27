@@ -1,0 +1,29 @@
+<!-- 게시글 목록을 보여주는 HTML페이지  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item{
+            border: 1px solid pink;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    테스트
+    <!-- 서버 사이드에서 동적으로 데이터를 렌더링한다.  -->
+    <% for(var i = 0; i<data.length; i++){ %>
+        <div class="item">
+            제목 : <%= data[i].title %><br>
+            날짜 : <%= data[i].date %><br>
+            내용 : <%= data[i].content %><br>
+            작성자 : <%= data[i].user_id %><br>
+            글번호 : <%= data[i].id %><br>
+        </div>
+    <% } %>
+    끝
+</body>
+</html>
