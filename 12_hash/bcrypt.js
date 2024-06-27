@@ -1,24 +1,31 @@
+// bcrypt 모듈을 불러옴
 const bcrypt = require('bcrypt');
-//npm install bcrypt
 
+// salt의 라운드 수를 설정
 const saltRounds = 10; 
-const myPllaintextPassword = 'my password';
 
-async function hashPassword(){
-    try{
-        const hash = await bcrypt.hash(myPllaintextPassword,saltRounds);
+// 평문 비밀번호 정의
+const myPlaintextPassword = 'my password';
 
-        //해시값을 메모리에 저장 
+// 비밀번호를 해싱하는 비동기 함수 정의
+async function hashPassword() {
+    try {
+        // 평문 비밀번호를 saltRounds를 사용하여 해싱
+        const hash = await bcrypt.hash(myPlaintextPassword, saltRounds);
+
+        // 해시된 비밀번호를 메모리에 저장
         const hashedPassword = hash;
-        console.log("Hashed Password : ",hashedPassword);
+        console.log("Hashed Password: ", hashedPassword);
     
-        //비밀번호 비교
-        const inputPassword = "my password"
-        const match = await bcrypt.compare(inputPassword,hashedPassword);
-        console.log("password match result : ",match)
-    }catch(arr){
-        //해당 블록에서 에러에 대한 기록을 남김 
-        console.error("Error : ",err);
+        // 사용자가 입력한 비밀번호와 해시된 비밀번호를 비교
+        const inputPassword = "my password";
+        const match = await bcrypt.compare(inputPassword, hashedPassword);
+        console.log("Password match result: ", match);
+    } catch (err) {
+        // 에러 발생 시 해당 블록에서 에러를 기록
+        console.error("Error: ", err);
     }
 }
+
+// 비밀번호 해싱 함수 호출
 hashPassword();
